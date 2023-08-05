@@ -1,1 +1,42 @@
-<h1>Please login with your credentials</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Please login with your credentials...</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div>
+        <div>
+            <h1>Sign Up</h1>
+
+            <div>
+                <style>
+                    h5{
+                        color: red;
+                    }
+                </style>
+                {% for message in messages %}
+                <h5>{{message}}</h5>
+                {% endfor %}
+            </div>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+
+                <button type="submit">Login</button>
+                <div>
+                    <p>Need an account? <a href="/signup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
