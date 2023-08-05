@@ -7,31 +7,31 @@ from profileapp.models import Profile
 
 def signup(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        firstname = request.POST['firstname']
+        print(request.POST)
+        name = request.POST['name']
         lastname = request.POST['lastname']
+        username = request.POST['username']
         email = request.POST['email']
-        password1 = request.POST['password1']
+        password = request.POST['password']
         password2 = request.POST['password2']
 
-        if password1 == password2:
+        if password == password2:
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'email already exists!')
-                return redirect('signup/')
+                return redirect('signup')
             elif User.objects.filter(username=username).exists():
                 messages.info(request, 'username is already taken!')
-                return redirect('signup/')
+                return redirect('signup')
             else:
-                user = User.objects.create_user(firstname=firstname, lastname=lastname, username=username, email=email, password=password1)
+                user = User.objects.create_user(username=username, email=email, password=password, first_name=name, last_name=lastname)
                 user.save()
 
-                user_model = User.objects.get(username=username)
-                new_profile = Profile.objects.create(user=user_model, id_user=user_model.id)
+                new_profile = Profile.objects.create(username=user, name=name, last_name=lastname)
                 new_profile.save()
-                return redirect('login/')
+                return redirect('login')
         else:
             messages.info(request, 'passwords do not match')
-            return redirect('signup/')
+            return redirect('signup')
     else:
 
         return render(request, 'registrationapp/registration.html')

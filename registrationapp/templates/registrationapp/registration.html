@@ -26,12 +26,14 @@
 
             <form action="" method="POST">
                 {% csrf_token %}
+                {{ form.as_p }}
 
-                <input type="text" name="firstname" placeholder="firstname">
+                
+                <input type="text" name="name" placeholder="name">
                 <input type="text" name="lastname" placeholder="lastname">
                 <input type="text" name="username" placeholder="Username">
                 <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password1" placeholder="Password">
+                <input type="password" name="password" placeholder="Password">
                 <input type="password" name="password2" placeholder="Confirm Password">
 
                 <button type="submit">Sign Up</button>
