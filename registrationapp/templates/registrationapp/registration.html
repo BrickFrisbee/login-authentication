@@ -10,38 +10,46 @@
 
   <body>
     <div>
+      <div>
+        <h1>Create an Account</h1>
+
         <div>
-            <h1>Sign Up</h1>
-
-            <div>
-                <style>
-                    h5{
-                        color: red;
-                    }
-                </style>
-                {% for message in messages %}
-                <h5>{{message}}</h5>
-                {% endfor %}
-            </div>
-
-            <form action="" method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-
-                
-                <input type="text" name="name" placeholder="name">
-                <input type="text" name="lastname" placeholder="lastname">
-                <input type="text" name="username" placeholder="Username">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <input type="password" name="password2" placeholder="Confirm Password">
-
-                <button type="submit">Sign Up</button>
-                <div>
-                    <p>Do you have an account? <a href="/login">Login</a></p>
-                </div>
-            </form>
+          <style>
+            h5 {
+              color: red;
+            }
+          </style>
+          {% for message in messages %}
+          <h5>{{message}}</h5>
+          {% endfor %}
         </div>
+
+        <form action="" method="POST">
+          {% csrf_token %} {{ form.as_p }}
+
+          <div style="margin-top: 5px;">
+            <input type="text" name="name" placeholder="name" />
+            <input type="text" name="lastname" placeholder="lastname" />
+          </div>
+          <div style="margin-top: 5px;">
+            <input type="text" name="username" placeholder="Username" />
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+          <div style="margin-top: 5px;">
+            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password2"
+              placeholder="Confirm Password"
+            />
+          </div>
+
+          <button type="submit" style="margin-top: 5px;">Sign Up</button>
+          <div>
+            <p>Do you have an account? <a href="/login">Login</a></p>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
