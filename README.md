@@ -55,4 +55,27 @@ Copy the address where the development server is at and enter it in your browser
 ## Walkthrough
 After entering the address in your browser, you will see a 404 error:
 
+![404 error](https://github.com/BrickFrisbee/login-authentication/blob/main/images/local.PNG "local")
+
+The 404 error appears because you must enter a path with the address. The path for the signup page is `signup/`, which should be appended to the to address. You should now see the signup page:
+
+![Create an Account](https://github.com/BrickFrisbee/login-authentication/blob/main/images/Signup_Blank.PNG "signup")
+
+Enter credentials to create a new account. After hitting the "Sign Up" button, the credentials will be added to the database. The following is an image of the `auth_user` table in the database. Having created a user with the first name "firsttest1," last name "lasttest1," email "test1@test.me," username "test1," and password "test," the information is visible in the first row of the table and can be used to login:
+
+![Database](https://github.com/BrickFrisbee/login-authentication/blob/main/images/database.png "database")
+
+After creating a new user and hitting the signup button, you will be redirected to the `login/` page:
+
+![Login](https://github.com/BrickFrisbee/login-authentication/blob/main/images/Login_Blank.PNG "login")
+
+Having successfully logged in with your credentials, you will be redirected to the `success/` page. You can choose to return to the `signup/` page or `login/` page:
+
+![Successful Login](https://github.com/BrickFrisbee/login-authentication/blob/main/images/Success.PNG "success")
+
+
+
+
+
+
 
