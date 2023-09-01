@@ -8,6 +8,8 @@ This authentication application, built with Python, Django, and PostgreSQL, was 
 * Mismatched passwords during registration result in an error.
 * Attempting to log in with non-existent credentials also raises an error.
 
+
+
 ## Prior to Execution
 Before running the project, you must install all necessary components on your machine: python3, Django, PostgreSQL15, and psycopg2. The following instructions describe how to prepare the environment on Windows 10 or Mac.
 
@@ -38,6 +40,8 @@ Finally, after installing all necessary components, migrate to your database by 
 
 Optionally, you can create a super user by using `python manage.py createsuperuser`.
 
+
+
 ## Execution
 To run the project, first launch the virtual environment, then navigate to the project folder. In the project folder, enter `python manage.py runserver`. If the environment was properly configured, you should see the following output in the terminal:
 ```
@@ -51,6 +55,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 Copy the address where the development server is at and enter it in your browser. 
+
+
 
 ## Walkthrough
 After entering the address in your browser, you will see a 404 error:
