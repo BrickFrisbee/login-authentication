@@ -1,6 +1,11 @@
 # Login Authentication using Python and Django
 Login authentication application using Python and Django with PostgreSQL
 
+* [Description](https://github.com/BrickFrisbee/login-authentication/blob/main/README.md#description)
+* [Prior to Execution](https://github.com/BrickFrisbee/login-authentication/blob/main/README.md#prior-to-execution)
+* [Execution](https://github.com/BrickFrisbee/login-authentication/blob/main/README.md#execution)
+* [Walkthrough](https://github.com/BrickFrisbee/login-authentication/blob/main/README.md#walkthrough)
+
 ## Description
 This authentication application, built with Python, Django, and PostgreSQL, was developed on Windows 10 using VSCode and has been tested on both Windows 10 and Mac OS Ventura. It gathers registration details from new users and saves this information in a PostgreSQL database. Upon successful login, users are directed to a homepage. The application enforces the following:
 
